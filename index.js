@@ -9,6 +9,7 @@ import usersRoute from "./routes/users-route.js";
 import eventsRoute from "./routes/events-route.js";
 import paymentsRoute from "./routes/payments-route.js";
 import bookingsRoute from "./routes/bookings-route.js";
+import cors from "cors";
 
 
 
@@ -16,6 +17,7 @@ import bookingsRoute from "./routes/bookings-route.js";
 
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
